@@ -1,11 +1,9 @@
-import { Link } from "react-router";
-import { useFetch } from "../hooks/useFetch";
+import React from 'react'
 
-function Home() {
-  const { data, isPanding, error } = useFetch("https://dummyjson.com/products");
+function Description() {
   return (
-    <a href="/Description">
-    <section className="card grid grid-cols-3 p-6">
+    <div>
+      <section className="card grid grid-cols-3 p-6">
       {data &&
         data.map((product) => {
           return (
@@ -24,8 +22,8 @@ function Home() {
           );
         })}
     </section>
-    </a>
-  );
+    </div>
+  )
 }
 
-export default Home;
+export default Description
